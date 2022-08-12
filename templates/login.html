@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<link rel="stylesheet" href="/static/general.css">
+
+<body>
+    <div class="login__container">
+
+
+        <div class="left">
+
+        </div>
+
+
+
+        <div class="right">
+            <div class="right__container">
+                <h1 class="head" style="margin: 0">Hello User</h1>
+                <h4 class="head">Log in to MYRECS</h4>
+                <form method="POST" action=" ">
+                    {{form.hidden_tag()}} {{form.username(class='red')}}
+
+                    <br/>
+                    <br/> {{form.password(class='red')}}
+                    <br/>
+                    <br/> {{form.submit(class='loginbtn')}}
+                </form>
+
+                <a href="{{ url_for( 'register')}} " class="account">Don't have an account? Sign Up</a><br>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.head{
+    text-align: center;
+}
+
+.account {
+    text-decoration: none;
+    margin-top: 1rem;
+    color: rgb(167, 167, 167);
+    font-weight: 200;
+}
+.account a{
+    text-decoration: none;
+    margin-top: 1rem;
+    color: rgb(167, 167, 167);
+    font-weight: light;
+}
+
+.login__container{
+    display: flex;
+    height: 100vh;
+}
+.left{
+    flex: .5;
+    /* border: 1px solid black; */
+    background-image: url(./assests/rectangle.png);
+    background-size: cover;
+   
+}
+.right{
+    flex: .5;
+    /* border: 1px solid black; */
+    padding: 2rem;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.right__container{
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.red{
+    border: 1px solid rgb(167, 167, 167);
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 10px;
+    background-color: #f9fbfc;
+    text-align: center;
+}
+
+.loginbtn{
+    width: 100%;
+    background-color: #275bc3;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    /* border-radius: 10px; */
+    border: none;
+}
+
+.productContainers{
+   border: 1px solid #c7c7c7 !important;
+   /* border-radius: 20px; */
+   background-color: #f7f6f2;
+   max-width: 100%;
+}
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.head__container{
+    border: 1px solid #c7c7c7;
+    width: 100%;
+}
+
+.subcontainer{
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+.subcontainer2{
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid #c7c7c7; */
+    padding: 2rem;
+    background-color: #8eb2fa;
+    color: white;
+}
+
+.dash__head{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.dash__head2{
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.dash__subhead{
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.search__header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+
+}
+
+.search__bar{
+    border: 1px solid #e0e0e0;
+    padding: 1.2rem;
+    border-radius: 10px 0 0 10px;
+    width: 40%;
+    /* margin: 0 auto; */
+}
+
+.searchbtn{
+    background-color: #275bc3;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 0 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.body__container{
+    height: 90vh;
+     /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.homebtn{
+    background-color: #275bc3;
+    color: white;
+    padding: 1.5rem 4rem ;
+    border: none;
+    cursor: pointer;
+}
+
+.bodyy{
+    background-image: url(../static//assests/back.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='product_dec.css') }}"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.scss') }}"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"> -->
+</head>
+<link rel="shortcut icon" href="../static/general.css" type="image/x-icon">
+
+<body>
+    <header class="header">
+        <h1 class="logo"><a href="#">Myrecs</a></h1>
+        <ul class="main-nav">
+            <li><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+            <li><a href="{{url_for('search')}}">Search</a></li>
+            <li><a href="{{url_for('logout')}}">Logout</a></li>
+        </ul>
+    </header>
+
+
+    <div class="productchkt" style=" padding: 4rem 0; display: flex; width:80%; margin: 0 auto; justify-content: space-between;">
+
+        <div class="imagee" style="flex: 0.3;  ">
+            <img src="{{product.loc[location]['image']}}" alt="" style=" width: 50%; height: 50%;  margin: 0;">
+        </div>
+        <div class="product" style="flex: 0.7;">
+            <h1>{{product.loc[location]["title"]}}</h1>
+            Brand:
+            <a href=" ">{{product.loc[location]["brand"]}}</a> |
+            <a href=" ">Similar Products by {{product.loc[location]["brand"]}}</a>
+            <span class="price">${{product.loc[location]["price"]}}</span>
+            <form method="POST" action=" ">
+                <input type="submit" name="buy" value="buy" style=" background-color: #275bc3;
+            color: white;
+            padding: 1.5rem 4rem ;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+            font-size: 1rem;
+            ">
+            </form>
+            <p>{{product.loc[location]["description"]}}</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div style="width: 80%;
+    
+    margin: 0 auto;">
+
+
+
+        <h2>You may also like</h2>
+        <div class="recprod ">
+            <div id="columns1" class="columns_5">
+                {%for key, value in dictionary.items()%}
+                <a href="/{{value[0]}} ">
+                    <figure>
+                        <img src="{{value[2]}}" alt="">
+                        <figcaption>{{value[0]}}</figcaption>
+                        <span>{{value[1]}}</span>
+                    </figure>
+                </a>
+
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

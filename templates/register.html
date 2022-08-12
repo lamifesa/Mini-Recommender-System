@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<link rel="stylesheet" href="/static/general.css">
+
+<body>
+    <!-- <div class="link">
+        <a href="{{url_for('login')}}">Log in</a>
+        <a href="{{url_for('register')}}">Register</a>
+        <a href="{{url_for('search')}}">Search</a>
+        <a href="{{url_for('dashboard')}}">Dashboard</a>
+    </div> -->
+    <div class="login__container">
+        <div class="left">
+
+        </div>
+
+        <div class="right">
+            <div class="right__container">
+
+
+
+                <h1 class="head">Reqister with ###</h1>
+                <form method="POST" action=" ">
+                    {{form.hidden_tag()}}
+                    <br /> {{form.username(class='red')}}
+                    <br /> {{form.email}}
+                    <br /> {{form.password(class='red')}}
+                    <br />
+                    <br /> {{form.submit(class='loginbtn')}}
+                </form>
+
+                <h4 class="account"> Already have an account? <a href="{{ url_for('login')}}">Login</a></h4><br>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

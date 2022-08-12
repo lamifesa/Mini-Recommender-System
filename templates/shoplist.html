@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shoplist.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+</head>
+<link rel="stylesheet" href="/static/general.css">
+
+<body>
+    <section class="container">
+        <div class="heading">
+            <img class="heading__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/laptop.svg">
+            <h1 class="heading__title">Shopping List</h1>
+        </div>
+        <form method="POST" class="form">
+            <div>
+                <label class="form__label" for="todo">~ Today I need ~</label>
+                <input class="form__input" type="text" id="todo" name="content" size="30">
+                <button class="button"><span>Submit</span>
+        </button>
+            </div>
+        </form>
+        <div>
+
+
+            <form method="POST">
+                {% for item in items %}
+                <ul class="toDoList">
+                    <li>{{item}}
+                        <a href="/delete/{{item}}"><button name="choose" class="button" value="delete"  onclick=" "><span>Delete</span></button></a></li>
+                </ul>
+            </form>
+            {% endfor %}
+        </div>
+        <a href="{{url_for('result')}}"><button name="choose" class="button" value="delete"  onclick=" "><span>Go</span></button></a>
+        <!-- <a href="{{url_for('dashboard')}}"><button  class="button"  onclick=" "><span>Dashboard</span></button></a> -->
+    </section>
+</body>
+
+</html>
+<!-- <button name="choose " value="update" href="/update/<task>" onclick=" ">Update</button> -->
